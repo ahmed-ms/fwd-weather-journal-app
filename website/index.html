@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome icons lib -->
+    <script src="https://use.fontawesome.com/ad3268b1e4.js"></script>
+
+    <title>Weather Journal App</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="user-interactive">
+            <h2>Weather Journal App </h2>
+            <div class="search-box">
+                <input type="text" placeholder="enter zip code here" id="zip">
+            </div>
+            <div class="feel">
+                <label for="feelings">How are you feeling today?</label>
+                <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="5" cols="50"></textarea>
+                <button id="generate" type="submit"> Generate </button>
+            </div>
+        </div>
+        <hr>
+        <div class="entry">
+            <div class="title">Most Recent Entry</div>
+            <div id="entryHolder">
+                <div id="date"></div>
+                <div id="temp"></div>
+                <div id="content"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

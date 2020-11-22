@@ -1,0 +1,136 @@
+/* Remove defualt broweser margin and padding*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 30px 50px;
+}
+/* Main  */
+main {
+    display: flex;
+    box-shadow: 8px 6px 6px 0px #393c3d;
+}
+/* User form*/
+.user-interactive {
+    padding: 20px;
+    background: #c3c0c0;
+}
+
+.user-interactive h2 {
+    font-size: 40px;
+    margin: 30px 0;
+}
+
+.search-box input {
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    height: 50px;
+    background: #526f99;
+    color: floralwhite;
+    border: none;
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: rgb(80, 77, 77);
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    background-color: #5dadbe;
+}
+
+.feel {
+    min-height: 400px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feel label {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: darkslategrey;
+}
+
+.feel textarea {
+    padding: 5px;
+    font-size: 20px;
+    background-color: #526f99;
+    margin-bottom: 20px;
+    width: 350px;
+    color: floralwhite;
+}
+
+.search-box input::placeholder,
+.feel textarea::placeholder {
+    color: rgb(177, 171, 171);
+}
+
+.feel button {
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+    width: 150px;
+    background: #526f99;
+    color: floralwhite;
+}
+
+/* End of user form */
+/* Most entry */
+.entry {
+    flex-grow: 1;
+    color: floralwhite;
+    background-color: #5dadbe;
+    padding: 20px;
+    font-size: 23px;
+}
+
+.entry .title {
+    color: darkslategrey;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    
+}
+
+
+#entryHolder{
+    display: none;
+    border: 1px solid #eee;
+    background: #33333359;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#entryHolder i{
+    margin: 10px;
+    color: #5dadbe;
+    padding: 5px;
+    background-color: #eee;
+}
+
+#entryHolder span{
+    font-size: 20px;
+    color: #c7fffa;
+}
+
+/* End of most entry */
+
+
+
+
+/* Responsive */
+
+@media only screen and (max-width:600px) {
+    main {
+        flex-direction: column;
+    }
+}
