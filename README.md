@@ -22,5 +22,9 @@ When those are installed run `node server.js` in the terminal. Once the app is r
 * ExpressJS
 * Weather API used [OpenWeatherMap](https://openweathermap.org/).
 
+![Screenshot ](https://github.com/ahmed-ms/fwd-weather-journal-app/blob/main/app-screenshot.png)
+
+
+
 ### Note 
 README.md file has written by help of this repo https://github.com/JZerman2018/my-weather-journal-app
