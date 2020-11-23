@@ -27,6 +27,8 @@ app.use(express.static('website'));
 const port = 8080;
 
 const listening = prot => console.log(`Server listening : ${port}`);
+
+
 // Post route callback , add data to project endpoint
 const addDataToProjec = (req, res) => {
     console.log('Post Data recived');
@@ -34,10 +36,21 @@ const addDataToProjec = (req, res) => {
     projectData['weather'] = req.body;
     res.send(projectData['weather']);
 }
+
+
+
 // Post route 
 app.post('/postData', addDataToProjec);
-// Get route , return endpoint data
-app.get('/getMostEntry', (req, res) => res.send(projectData['weather']));
+
+
+//return endpoint data
+const sendMostEntry =(req,res)=>{
+    res.send(projectData['weather'])
+}
+
+
+// Get route 
+app.get('/getMostEntry', sendMostEntry);
 
 
 // Strat server

@@ -1,6 +1,6 @@
 // Globale variables
 let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
-const apiKey = '3cb86747650848dd3291b53657fdb90e';
+const apiKey = '3cb86747650848dd3291b53657fdb90e&units=metric';
 
 
 // Create a new date instance dynamically with JS
@@ -33,11 +33,10 @@ const startAction = (e) => {
                     throw new Error(data.message);
                 }  
                 console.log(data);
-                // convert temperature to celsius               
-                const temp = Math.ceil(data.main.temp - 273.15);
+            
 
                 // Add data to post resquest
-                const postData = { date: newDate, temp: temp, feelings: feelings };
+                const postData = { date: newDate, temp: data.main.temp , feelings: feelings };
                 return postData;
             }).then(postData => {
                 // Post data
